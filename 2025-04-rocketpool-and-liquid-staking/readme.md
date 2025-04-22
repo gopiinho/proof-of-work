@@ -46,3 +46,58 @@ For example a user deposits 10 ETH and gets 10 rETH in return.
 After that X amount of time after accumulating their staking rewards they will be able to exchange their 10 rETH > 11 ETH since its a yield bearing token that accrues value.
 
 **ETH/rETH = Amount of ETH backed by 1 rETH**
+
+## **Mint / Burn**
+
+The process of burning and minting rETH utilizes 3 major contracts:
+
+- RocketDepositPool
+- RocketStorage
+- RocketTokenRETH
+
+**RocketDepositPool**: The contract there ETH is initially sent to, and is responsible for making external contract calls to **RocketStorage** to check if deposits are enabled and then lastly mints rETH through **RocketTokenRETH** and then is sent to the user.
+
+**RocketStorage**: The database of the protocol, holds the persistent storage.
+
+**RocketTokenRETH**: The ERC20 that is minted upon deposit of ETH.
+
+## rETH / ETH Exchange Rate
+
+To calculate how much 1 rETH is worth in ETH we have this mathematical equation.
+
+ETH = (rETH / rETH supply) \* ETH Supply
+
+E = Total ETH deposited in protocol
+R = Total rETH supply
+
+r = rETH amount
+
+e = ETH amount
+
+e = ( r / R ) \* E
+
+**Example:**
+
+R = 2500
+
+E = 3000
+
+How much ETH will a user get per 1 rETH burned ?
+
+e = ( 1 / 2500 ) \* 3000
+
+e = 0.0004 \* 3000
+
+e = 1.2
+
+Hence, if total **rETH** supply minted is 2500 and total **ETH** deposited is 3000, then a user will get in return 1.2 **ETH** every 1 **rETH** they burn.
+
+**How much rETH will a user get per 1 ETH deposited ?**
+
+Here our equation is r = ( e \* R ) / E
+
+r = ( 1 \* 2500 ) / 3000
+
+r = 2500 / 3000
+
+r = **0.8333**
