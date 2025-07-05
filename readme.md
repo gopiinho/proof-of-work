@@ -9,3 +9,5 @@ This repo is a collection of personal notes of all the learnings.
 [[2025-04] – Solidity Gas Optimization](./2025-04-gas-optimization/readme.md)
 
 [[2025-05] – WETH Basics](./2025-05-weth-basics/readme.md)
+
+[[2025-07] – Transient Storage](./2025-07-transient-storage/readme.md)
