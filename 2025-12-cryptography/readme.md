@@ -24,3 +24,21 @@ Since we have very limited information it is very hard to estimate that factor. 
 
 
 ```
+
+### Private Keys
+
+A simple number picked at random. Ownership and control of private key is root of user control of all funds associated witht he corrosponding Ethereum address as well as access to smart contracts authorized to that address. It must be kept a secret at all times since if it is not your keys then it is not your funds.
+
+The process of generating private keys is offline and does not require connection to Ethereum network or any communication at all.
+
+### Public Keys
+
+An Ethereum public key is a point on an elliptic curve, meaning it is a set of x and y coordinates that satisfy the elliptic curve equation.
+
+Meaning, an Ethereum public key is two numbers, joined together. In case of Ethereum, it is generated using private key.
+
+**MATH**
+
+The public key is calculated from private key using elliptic curve manipulation, which is practically irreversible: `K = k * G`
+
+Where `k` is privatye key, `G` is the constant point called generator point, and `K` is resulting public key, and `*` is the special slliptic curve "multiplication" operator. This elliptic curve multiplication is not like normal multiplication.
