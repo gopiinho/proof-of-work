@@ -13,3 +13,5 @@ This repo is a collection of personal notes of all the learnings.
 [[2025-07] – Transient Storage](./2025-07-transient-storage/readme.md)
 
 [[2025-12] – Cryptography](./2025-12-cryptography/readme.md)
+
+[[2025-12] – Wallets](./2025-12-wallets/readme.md)
